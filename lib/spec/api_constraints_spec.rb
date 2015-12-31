@@ -12,6 +12,8 @@ describe ApiConstraints do
 			api_constraints_v1.matches?(request).should be true
 		end
 
+		# what happens when v3 comes out????
+		# how does the test adjust without manual changes????
 		it "returns the default version when 'default' option is specified" do
 			request = double(host: 'api.marketplace.dev')
 			api_constraints_v2.matches?(request).should be true
